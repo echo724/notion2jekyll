@@ -126,4 +126,4 @@ dmypy.json
 .sh
 
 .DS_Store
-.md
+*.md
