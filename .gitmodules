@@ -1,0 +1,3 @@
+[submodule "notion2md"]
+	path = notion2md
+	url = https://github.com/echo724/notion2md.git
