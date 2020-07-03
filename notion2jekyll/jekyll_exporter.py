@@ -38,6 +38,22 @@ def remove_overlap(block,md):
     md = md.replace(title,"")
     return md
 
+def get_tags(block):
+    tags = block.get_property('tags')
+    return tags
+
+def post_header(block):
+    header = "---\n"
+    header += "tags:\n"
+    tags = get_tags(block)
+    for tag in tags:
+        header += '- ' + tag +'\n'
+    header += 'layout: article\n'
+    header += 'aside:\n  toc: true\n'
+    header += '---\n'
+    return header
+
+
 #url should be collection view page url
 def export_cli():
     token_v2, url = get_page()
