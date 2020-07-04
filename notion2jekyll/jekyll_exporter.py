@@ -1,4 +1,4 @@
-from notion2md.md_exporter import block2md, recursive_getblocks,get_page
+from notion2md.notion2md.md_exporter import block2md, recursive_getblocks,get_page
 from notion.client import NotionClient
 import os
 
@@ -24,13 +24,13 @@ def make_file(block):
     fname = set_filename(block)
     fname = os.path.join(directory,fname)
     file = open(fname,'w')
-    return file
+    return file,directory
 
 #page - page type in collection, client = NotionClient
-def md_export(page,client):
+def md_export(page,client,dir):
     blocks = []
     recursive_getblocks(page,blocks,client)
-    md = block2md(blocks)
+    md = block2md(blocks,dir=dir)
     return md
 
 def remove_overlap(block,md):
@@ -42,7 +42,7 @@ def get_tags(block):
     tags = block.get_property('tags')
     return tags
 
-def post_header(block):
+def post_header(block,md):
     header = "---\n"
     header += "tags:\n"
     tags = get_tags(block)
@@ -51,7 +51,8 @@ def post_header(block):
     header += 'layout: article\n'
     header += 'aside:\n  toc: true\n'
     header += '---\n'
-    return header
+    md = header + md
+    return md
 
 
 #url should be collection view page url
@@ -63,9 +64,10 @@ def export_cli():
 
 
 def export(page,client):
-    md = md_export(page,client)
+    file,dir = make_file(page)
+    md = md_export(page,client,dir)
     md = remove_overlap(page,md)
-    file = make_file(page)
+    md = post_header(page,md)
     file.write(md)
     file.close
-    print("Notion page is exported to Jekyll post")
+    print("Notion page is successfully exported to Jekyll post")
