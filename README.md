@@ -9,13 +9,13 @@ Notion2Jekyll provides these features.
 
 2. Makes [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/) to the markdown file.
 
-- `Tags`
+  - `Tags`
 
-- `toc` → `if your Jekyll blog supports`
+  - `toc` → `if your Jekyll blog supports`
 
-- `layout` → `article(default)`
+  - `layout` → `article(default)`
 
-1. Download images in your notion page, and automatically set the image path in the md file( `You need to rename the path when you upload in your blog` ).
+3. Download images in your notion page, and automatically set the image path in the md file( `You need to rename the path when you upload in your blog` ).
 
 ## Installation
 
