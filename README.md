@@ -41,8 +41,8 @@ from notion2jekyll import export
 from notion.client import NotionClient
 token_v2 = #<your notion token_v2>
 url = #<your notion page url>
-page = NotionClient(token_v2 = token_v2)
-export(page,client)
+
+export(url,token_v2)
 ```
 
 - Exporter will make the md file and images in `./jekyllpost_output/` and `./jekyllpost_output/<your block title>/`
