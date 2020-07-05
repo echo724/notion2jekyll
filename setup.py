@@ -6,7 +6,7 @@ with io.open('README.md', 'r', encoding='utf-8') as f:
     readme = f.read()
 setup(
       name='notion2jekyll',
-      version='0.1.2.2',
+      version='0.1.2.3',
       description='Export notion page to jekyll post',
       long_description=readme,
       long_description_content_type="text/markdown",
@@ -17,7 +17,7 @@ setup(
       install_requires=[
         'notion>=0.0.25',
         'requests>=2.22.0',
-        'notion2md>=0.1.5'
+        'notion2md>=0.1.6'
       ],
       packages=setuptools.find_packages(),
       classifiers=[
