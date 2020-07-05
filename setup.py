@@ -17,6 +17,7 @@ setup(
       install_requires=[
         'notion>=0.0.25',
         'requests>=2.22.0',
+        'notion2md >= 0.1.5'
       ],
       packages=setuptools.find_packages(),
       classifiers=[
