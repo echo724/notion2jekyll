@@ -58,12 +58,12 @@ def post_header(block,md):
 #url should be collection view page url
 def export_cli():
     token_v2, url = get_page()
-    client = NotionClient(token_v2=token_v2)
+    export(url,token_v2)
+
+
+def export(url,token):
+    client = NotionClient(token_v2=token)
     page = client.get_block(url)
-    export(page,client)
-
-
-def export(page,client):
     file,dir = make_file(page)
     md = md_export(page,client,dir)
     md = remove_overlap(page,md)
