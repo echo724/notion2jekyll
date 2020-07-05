@@ -19,7 +19,7 @@ Notion2Jekyll provides these features.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.  
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install notion2jekyll.  
 
 ```Bash
 $pip install notion2jekyll
