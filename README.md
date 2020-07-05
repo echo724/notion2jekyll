@@ -1,4 +1,5 @@
 # Notion2Jekyll
+[![PyPI version](https://badge.fury.io/py/notion2jekyll.svg)](https://badge.fury.io/py/notion2jekyll)
 
 This makes your notion page to [Jekyll Post Markdown](https://jekyllrb-ko.github.io/docs/posts/) file. This is using [notion-py](https://github.com/jamalex/notion-py) to export notion page to markdown.  
 
