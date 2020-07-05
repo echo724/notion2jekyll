@@ -71,3 +71,6 @@ def export(page,client):
     file.write(md)
     file.close
     print("Notion page is successfully exported to Jekyll post")
+
+if __name__=="__main__":
+    export_cli()
