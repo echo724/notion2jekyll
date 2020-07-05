@@ -30,7 +30,7 @@ def make_file(block):
 def md_export(page,client,dir):
     blocks = []
     recursive_getblocks(page,blocks,client)
-    md = block2md(blocks,dir=dir)
+    md = block2md(blocks,dir)
     return md
 
 def remove_overlap(block,md):
