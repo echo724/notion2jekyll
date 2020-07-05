@@ -1,4 +1,4 @@
-from notion2md.notion2md.md_exporter import block2md, recursive_getblocks,get_page
+from notion2md.md_exporter import block2md, recursive_getblocks,get_page
 from notion.client import NotionClient
 import os
 
