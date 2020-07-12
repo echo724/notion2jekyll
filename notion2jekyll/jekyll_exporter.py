@@ -48,8 +48,7 @@ def post_header(block,md):
     tags = get_tags(block)
     for tag in tags:
         header += '- ' + tag +'\n'
-    header += 'layout: article\n'
-    header += 'aside:\n  toc: true\n'
+    header += 'layout: post\n'
     header += '---\n'
     md = header + md
     return md
@@ -60,8 +59,15 @@ def export_cli():
     token_v2, url = get_page()
     export(url,token_v2)
 
+def export_in(page,client):
+    file,dir = make_file(page)
+    md = md_export(page,client,dir)
+    md = remove_overlap(page,md)
+    md = post_header(page,md)
+    file.write(md)
+    file.close
 
-def export(url,token):
+def export_out(url,token):
     client = NotionClient(token_v2=token)
     page = client.get_block(url)
     file,dir = make_file(page)
