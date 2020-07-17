@@ -49,6 +49,8 @@ export(url,token_v2)
 
 - The url should be the page that you want to export.
 
+- The front matter in the markdown will be different based on your jekyll blog variables. So, change the front matters when you finish the export, or change the code in this project.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.  
