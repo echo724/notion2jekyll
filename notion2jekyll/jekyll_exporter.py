@@ -57,7 +57,7 @@ def post_header(block,md):
 #url should be collection view page url
 def export_cli():
     token_v2, url = get_page()
-    export(url,token_v2)
+    export_out(url,token_v2)
 
 def export_in(page,client):
     file,dir = make_file(page)
