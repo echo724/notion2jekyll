@@ -5,7 +5,7 @@ Jekyll Exporter makes your notion page to [Jekyll Post Markdown](https://jekyllr
 
 Notion2Jekyll provides these features.  
 
-1. Export markdown file from your notion page.
+1. Export a markdown file formatted as the jekyll-post format (`yyyy-m-dd-<your page's title>`) from your notion page.
 
 2. Makes [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/) to the markdown file.
 
