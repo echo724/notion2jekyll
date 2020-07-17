@@ -40,7 +40,7 @@ from notion.client import NotionClient
 token_v2 = #<your notion token_v2>
 url = #<your notion page url>
 
-export(url,token_v2)
+export_out(url,token_v2)
 ```
 
 - Exporter will make the md file and images in `./jekyllpost_output/` and `./jekyllpost_output/<your block title>/`
