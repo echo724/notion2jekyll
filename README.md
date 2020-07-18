@@ -61,6 +61,9 @@ block = client.get_block(url)
 export_in(block,client)
 ```
 
+
+## Aditional Info
+
 - Exporter will make the md file and images in `./jekyllpost_output/` and `./jekyllpost_output/<your block title>/`
 
 - The url should be the page that you want to export.
