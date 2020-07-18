@@ -34,7 +34,7 @@ $python -m notion2jekyll
 
 ## Usage in Python
 
-> I changed the way to use the jekyll exporter. Please follow this examples.
+> I changed the way to use the jekyll exporter. Please follow these examples.
 
 ### With nothing
 ```Python
