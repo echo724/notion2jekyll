@@ -18,7 +18,7 @@ def set_filename(block):
     return fname
 
 def make_file(block):
-    directory = './jekyllpost_output/'
+    directory = './_posts/'
     if not(os.path.isdir(directory)):
         os.makedirs(os.path.join(directory))
     fname = set_filename(block)
@@ -76,7 +76,7 @@ def export_out(url,token):
     md = post_header(page,md)
     file.write(md)
     file.close
-    print("Notion page is successfully exported to Jekyll post")
+    print("\nNotion page is successfully exported to Jekyll post")
 
 if __name__=="__main__":
     export_cli()

@@ -55,7 +55,11 @@ export_out(url,token_v2)
 ### With token_v2 & url & Notion-py Block
 ```Python
 from notion2jekyll import *
-client = NotionClient(token_v2=<your token_v2>)
+
+token_v2 = #<your notion token_v2>
+url = #<your notion page url>
+
+client = NotionClient(token_v2=token_v2)
 block = client.get_block(url)
 
 export_in(block,client)
@@ -64,7 +68,7 @@ export_in(block,client)
 
 ## Aditional Info
 
-- Exporter will make the md file and images in `./jekyllpost_output/` and `./jekyllpost_output/<your block title>/`
+- Exporter will make the md file and images in the folder named `posts` and `posts/<your block title>`
 
 - The url should be the page that you want to export.
 
