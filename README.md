@@ -5,15 +5,18 @@ Jekyll Exporter makes your notion page to [Jekyll Post Markdown](https://jekyllr
 
 Notion2Jekyll provides these features.  
 
-1. Export a markdown file formatted as the jekyll-post format (`yyyy-m-dd-<your page's title>`) from your notion page.
+1. Exports your notion page to the markdown file named as the jekyll-post title:
+    `yyyy-m-dd-<your page's title>`
 
-2. Makes [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/)s to the markdown file.
+2. Puts [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/)s to the markdown file.
 
   - `tags`
 
   - `layout: post`
 
-3. Download images in your notion page, and automatically set the image path in the md file( `You need to rename the path when you upload in your blog` ).
+3. Download images in your notion page, and automatically set the image path in the md file 
+
+    `You need to rename the path when you upload in your blog`
 
 ## Installation
 
