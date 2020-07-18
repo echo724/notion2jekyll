@@ -9,7 +9,7 @@ Notion2Jekyll provides these features.
 
 2. Makes [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/)s to the markdown file.
 
-  - `tags` 
+  - `tags`
 
   - `layout: post`
 
@@ -32,15 +32,33 @@ $python -m notion2jekyll
 #Notion Page Url: <your notion page to export>
 ```
 
-## Usage_Jupyter or Ipython
+## Usage in Python
 
+> I changed the way to use the jekyll exporter. Please follow this examples.
+
+### With nothing
 ```Python
-from notion2jekyll import export_out
-from notion.client import NotionClient
+from notion2jekyll import *
+
+export_cli()
+```
+
+### With token_v2 & url
+```Python
+from notion2jekyll import *
 token_v2 = #<your notion token_v2>
 url = #<your notion page url>
 
 export_out(url,token_v2)
+```
+
+### With token_v2 & url & Notion-py Block
+```Python
+from notion2jekyll import *
+client = NotionClient(token_v2=<your token_v2>)
+block = client.get_block(url)
+
+export_in(block,client)
 ```
 
 - Exporter will make the md file and images in `./jekyllpost_output/` and `./jekyllpost_output/<your block title>/`
