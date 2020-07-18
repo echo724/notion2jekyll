@@ -43,6 +43,8 @@ url = #<your notion page url>
 export_out(url,token_v2)
 ```
 
+## Additional Info
+
 - Exporter will make the md file and images in `./jekyllpost_output/` and `./jekyllpost_output/<your block title>/`
 
 - The url should be the page that you want to export.
