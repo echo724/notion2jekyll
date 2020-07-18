@@ -35,7 +35,7 @@ $python -m notion2jekyll
 ## Usage_Jupyter or Ipython
 
 ```Python
-from notion2jekyll import export_out
+from notion2jekyll.jekyll_exporter import export_out
 from notion.client import NotionClient
 token_v2 = #<your notion token_v2>
 url = #<your notion page url>
