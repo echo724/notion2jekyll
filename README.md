@@ -7,7 +7,9 @@ Notion2Jekyll provides these features.
 
 1. Exports your notion page to the markdown file named as the jekyll-post title:
     `yyyy-m-dd-<your page's title>`
+    
 > If there is no **Created Date** in the notion page's property, the exporter will automatically set the file name as title only.
+
 
 2. Puts [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/)s to the markdown file.
 
@@ -15,6 +17,7 @@ Notion2Jekyll provides these features.
 
   - `layout: post`
 
+> Even if your page doesn't have the tag property, the exporter will work.
 
 3. Download images in your notion page, and automatically set the image path in the md file 
 
