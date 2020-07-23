@@ -12,9 +12,13 @@ def format_date(block):
     return formatted_date
 
 def set_filename(block):
-    date = format_date(block)
+    try:
+        date = format_date(block) + "-"
+    except:
+        print("\n( The page has no Created Date )")
+        date = ""
     name = block.title.replace(" ","-")
-    fname = date + '-' + name + ".md"
+    fname = date + name + ".md"
     return fname
 
 def make_file(block):
@@ -39,15 +43,20 @@ def remove_overlap(block,md):
     return md
 
 def get_tags(block):
-    tags = block.get_property('tags')
+    try:
+        tags = block.get_property('tags')
+    except:
+        print("( The page has no Properties )")
+        tags = []
     return tags
 
 def post_header(block,md):
     header = "---\n"
-    header += "tags:\n"
     tags = get_tags(block)
-    for tag in tags:
-        header += '- ' + tag +'\n'
+    if len(tags) != 0:
+        header += "tags:\n"
+        for tag in tags:
+            header += '- ' + tag +'\n'
     header += 'layout: post\n'
     header += '---\n'
     md = header + md
@@ -68,6 +77,7 @@ def export_in(page,client):
     file.close
 
 def export_out(url,token):
+    print("--- Start Exporting ---")
     client = NotionClient(token_v2=token)
     page = client.get_block(url)
     file,dir = make_file(page)
@@ -76,7 +86,7 @@ def export_out(url,token):
     md = post_header(page,md)
     file.write(md)
     file.close
-    print("\nNotion page is successfully exported to Jekyll post")
+    print("\n--- Jekyll Exporter successfully exported notion page ---")
 
 if __name__=="__main__":
     export_cli()
