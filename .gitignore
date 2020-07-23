@@ -127,3 +127,4 @@ dmypy.json
 *.sh
 
 .DS_Store
+_posts
